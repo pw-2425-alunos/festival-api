@@ -20,9 +20,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 
+from festival.api import api
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("festival.urls"))
+    path("api/", api.urls)
 ]
 
 if settings.DEBUG:
